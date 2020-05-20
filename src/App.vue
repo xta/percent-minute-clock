@@ -1,23 +1,48 @@
 <template>
   <div id="app">
-    <h1>percent-minute-clock</h1>
+    <div class="clock">{{ hour }} : {{ minute }} : {{ second }}</div>
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
-  components: {}
+  components: {},
+  data() {
+    return {
+      hour: "--",
+      minute: "--",
+      second: "--"
+    };
+  },
+  mounted: function() {
+    this.updateClock();
+  },
+  methods: {
+    currentTime() {
+      var now = new Date();
+      var timestamp = {
+        h: now.getHours(),
+        m: now.getMinutes(),
+        s: now.getSeconds()
+      };
+      return timestamp;
+    },
+    updateClock() {
+      var now = this.currentTime();
+      this.hour = now.h;
+      this.minute = now.m;
+      this.second = now.s;
+
+      setTimeout(this.updateClock, 500);
+    }
+  }
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.clock {
+  font-size: 10em;
+  font-family: monospace;
 }
 </style>
