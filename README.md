@@ -12,5 +12,6 @@ yarn serve
 
 ### Deploy to gh-pages
 ```
+git checkout gh-pages
 ./deploy.sh
 ```
