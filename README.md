@@ -10,15 +10,7 @@ yarn install
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Deploy to gh-pages
 ```
-yarn build
+./deploy.sh
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
