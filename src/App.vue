@@ -5,6 +5,10 @@
       <Digits :value="minute" :basis="60" label="M" :percentMode="true" />:
       <Digits :value="second" :basis="60" label="S" :percentMode="true" />
     </div>
+
+    <div class="source">
+      <a href="https://github.com/xta/percent-minute-clock">xta/percent-minute-clock</a>
+    </div>
   </div>
 </template>
 
@@ -55,13 +59,25 @@ export default {
   justify-content: center;
 }
 
-@media (max-width: 40.0rem) {
+.source {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+.source a {
+  color: rgb(15, 76, 129);
+}
+
+@media (max-width: 40rem) {
   .clock {
     font-size: 4em;
   }
 }
 
-@media screen and (min-width: 40.0rem) and (max-width: 60.0rem) {
+@media screen and (min-width: 40rem) and (max-width: 60rem) {
   .clock {
     font-size: 7em;
   }
