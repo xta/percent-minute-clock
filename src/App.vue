@@ -54,4 +54,16 @@ export default {
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 40.0rem) {
+  .clock {
+    font-size: 4em;
+  }
+}
+
+@media screen and (min-width: 40.0rem) and (max-width: 60.0rem) {
+  .clock {
+    font-size: 7em;
+  }
+}
 </style>
