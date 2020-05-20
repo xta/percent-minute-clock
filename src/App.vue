@@ -49,7 +49,7 @@ export default {
 <style>
 .clock {
   font-size: 10em;
-  font-family: monospace;
+  font-family: "Roboto Mono", monospace;
 
   display: flex;
   justify-content: center;
