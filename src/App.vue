@@ -1,13 +1,19 @@
 <template>
   <div id="app">
-    <div class="clock">{{ hour }} : {{ minute }} : {{ second }}</div>
+    <div class="clock">
+      <Digits :value="hour" :basis="24" label="H" />:
+      <Digits :value="minute" :basis="60" label="M" :percentMode="true" />:
+      <Digits :value="second" :basis="60" label="S" :percentMode="true" />
+    </div>
   </div>
 </template>
 
 <script>
+import Digits from "./components/Digits.vue";
+
 export default {
   name: "App",
-  components: {},
+  components: { Digits },
   data() {
     return {
       hour: "--",
@@ -44,5 +50,8 @@ export default {
 .clock {
   font-size: 10em;
   font-family: monospace;
+
+  display: flex;
+  justify-content: center;
 }
 </style>
