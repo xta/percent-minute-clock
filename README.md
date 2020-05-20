@@ -13,5 +13,6 @@ yarn serve
 ### Deploy to gh-pages
 ```
 git checkout gh-pages
+git rebase master
 ./deploy.sh
 ```
