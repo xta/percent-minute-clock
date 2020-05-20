@@ -1,18 +1,24 @@
-# percent-minute-clock
+# Percent Clock
 
-## Project setup
+[Concept clock](https://xta.github.io/percent-minute-clock/) that shows parts of the time in percentages. Not meant for precision usage.
+
+## Setup
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Local Dev
 ```
 yarn serve
 ```
 
-### Deploy to gh-pages
+### Deploy
 ```
 git checkout gh-pages
 git rebase master
 ./deploy.sh
 ```
+
+### License
+
+MIT
